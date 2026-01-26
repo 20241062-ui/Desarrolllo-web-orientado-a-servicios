@@ -1,4 +1,4 @@
-const urlApi = "[https://dragonball-api.com/api/characters](https://dragonball-api.com/api/characters)";
+const urlApi = "https://dragonball-api.com/api/characters";
 
 // Función asíncrona para pedir los datos
 const cargarPersonajes = () => {
@@ -43,6 +43,8 @@ const mostrarPersonajes = (personajes) => {
             <h3 class="practice-title">${personaje.name}</h3>
             <p class="practice-description">${personaje.description}</p>
             <p><strong>Ki:</strong> ${personaje.ki}</p>
+            <p ><strong>Raza:</strong> ${personaje.race}<p>
+            <p><strong>Genero: </strong> ${personaje.gender}</p>
         `;
         
         // Finalmente, agregamos la tarjeta completa al contenedor principal
