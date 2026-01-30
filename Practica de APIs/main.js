@@ -16,8 +16,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 //que va a haecr cada que selecciona un usuario
 const cargarMuro=()=>{
-    const userId=selectusuario.value
-    const nombre=selectusuario.options[selectusuario.selectedIndex].text
+    const userId = selectusuario.value
+    const nombre = selectusuario.options[selectusuario.selectedIndex].text
 
     //mosramos el nombre del usuario y su avatar
     nombreHeader.innerText=nombre
@@ -31,7 +31,10 @@ const cargarMuro=()=>{
         muroDiv.innerHTML=""
 
         posts.forEach(post=>{
-            
+            muroDiv.innerHTML+='<div class="post">'+
+            '<div class="post-tittle">'+post.tittle+'</div>'
+            +'<p>'+post.body+'<>'
+            +'</div>'
         })
     })
 }
