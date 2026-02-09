@@ -7,13 +7,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <h1>Catalogo de Productos</h1>
-        <div class="buscador-container">
-            <input type="text" id="input-busqueda" placeholder="Buscar productos por nombre...">
+    <header class="barra-superior">
+        <h1>Admin Dashboard</h1>
+        <div class="herramientas">
+            <input type="text" id="input-busqueda" placeholder="Buscar producto y Enter...">
+            <a href="add.html" class="btn-cargar">+ Nuevo Producto</a>
         </div>
-        <div id="contenedor-productos"></div>
-    </main>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+            <label>Categoría:</label>
+            <select id="select-categoria">
+                <option value="">Todas</option>
+            </select>
+
+            <label>Ordenar por:</label>
+            <select id="select-orden">
+                <option value="asc">Precio: Menor a Mayor</option>
+                <option value="desc">Precio: Mayor a Menor</option>
+            </select>
+        </aside>
+
+        <section class="contenido-central">
+            <table class="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Foto</th>
+                        <th>Título</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer class="paginacion">
+        <button id="btn-prev" onclick="cambiarPagina(-1)"> Anterior </button>
+        <span id="info-paginacion">Página 1</span>
+        <button id="btn-next" onclick="cambiarPagina(1)"> Siguiente </button>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
