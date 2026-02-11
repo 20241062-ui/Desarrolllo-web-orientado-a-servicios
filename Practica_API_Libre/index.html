@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh! Deck Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Yu-Gi-Oh! Explorer</h1>
+        <p>Selecciona un arquetipo para ver sus cartas</p>
+        
+        <div class="controls">
+            <select id="archetypeSelect">
+                <option value="" disabled selected>Cargando arquetipos...</option>
+            </select>
+            <button onclick="buscarCartas()">Buscar Cartas</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="cardsContainer" class="cards-grid">
+            <p class="placeholder">Selecciona un arquetipo arriba para comenzar.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

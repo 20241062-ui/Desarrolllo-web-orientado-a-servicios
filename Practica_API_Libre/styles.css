@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #2b1055, #7597de);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.controls {
+    margin-top: 1rem;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+select, button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #ffcc00;
+}
+
+.placeholder {
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    color: #ccc;
+}
