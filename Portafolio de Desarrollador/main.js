@@ -1,4 +1,5 @@
-const username = '20241062'; 
+const username = '20241062-ui';
+	
 
 const URL_PROFILE = `https://api.github.com/users/${username}`;
 const URL_REPOS = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6&type=owner&direction=desc`;
