@@ -1,4 +1,3 @@
-// URLs de la API
 const URL_ARCHETYPES = 'https://db.ygoprodeck.com/api/v7/archetypes.php';
 const URL_CARDS = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=';
 
