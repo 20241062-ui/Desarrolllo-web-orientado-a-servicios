@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica de Cloudinary</title>
+    <title>Replicando Práctica Cloudinary</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Práctica de Cloudinary Básica</h1>
-        
-        <input type="file" id="fileinput" accept="image/*">
-        
-        <img src="" alt="Imagen cargada desde Cloudinary" id="imagen" class="hidden">
-        
-        <button id="btnUpload">Cargar Imagen</button>
+
+    <div class="card">
+        <h1>Subida de Archivos</h1>
+        <p class="subtitle">Práctica con Fetch y Cloudinary</p>
+
+        <div class="upload-section">
+            <input type="file" id="inputArchivo" accept="image/*">
+            <p id="mensajeError" class="error-msg"></p>
+        </div>
+
+        <div id="contenedorVistaPrevia" class="hidden preview-box">
+            <p>Vista previa local:</p>
+            <img id="imagenVistaPrevia" alt="Previsualización">
+        </div>
+
+        <div class="actions">
+            <button id="botonSubir" disabled>Subir a la Nube</button>
+            <span id="indicadorCargando" class="hidden spinner">⏳ Subiendo...</span>
+        </div>
+
+        <div id="contenedorResultado" class="hidden result-box">
+            <h3>¡Imagen en la nube!</h3>
+            <img id="imagenResultado" alt="Imagen final">
+            
+            <div class="link-info">
+                <strong>URL:</strong>
+                <a id="enlaceResultado" href="#" target="_blank">Abrir enlace original</a>
+                <p id="textoUrl" class="url-text"></p>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>
